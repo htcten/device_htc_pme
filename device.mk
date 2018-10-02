@@ -436,6 +436,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
 # Telephony
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager.xml \

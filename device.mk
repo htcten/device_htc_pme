@@ -244,11 +244,13 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl-qti \
-    libcurl \
+    android.hardware.gnss@2.0-impl-qti \
+    android.hardware.gnss@2.0-service-qti \
+    libbatching \
+    libgeofencing \
     libgnss \
-    libgnsspps \
-    libsensorndkbridge
+    libsensorndkbridge \
+    libwifi-hal-ctrl
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
@@ -515,7 +517,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     librs_jni \
-    WallpapersBReel2019
+    WallpapersBReel2019 \
     PixelLiveWallpaperPrebuilt
 
 # Wifi

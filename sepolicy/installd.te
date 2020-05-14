@@ -1,1 +1,2 @@
 allow installd idmap:process noatsecure;
+allow installd device:file { open write };

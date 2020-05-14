@@ -1,1 +1,2 @@
+type thermalserviced, domain;
 allow thermalserviced thermal-engine:binder call;

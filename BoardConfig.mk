@@ -236,8 +236,8 @@ TARGET_LD_SHIM_LIBS := \
     /system/lib64/lib-imsvideocodec.so|/system/vendor/lib64/libshim_ims.so
 
 # Selinux
-BOARD_SEPOLICY_DIRS += \
-	device/htc/pme/sepolicy-tmp
+include device/qcom/sepolicy-legacy-um/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

@@ -1,0 +1,2 @@
+allow hal_perf_default hal_power_default:dir { open read search };
+allow hal_perf_default hal_power_default:file { open read };

@@ -14,8 +14,8 @@
 # limitations under the License.
 
 COMMON_LUNCH_CHOICES := \
-    aosp_pme-userdebug
+    carbon_pme-userdebug
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_pme.mk
+    $(LOCAL_DIR)/carbon_pme.mk
 

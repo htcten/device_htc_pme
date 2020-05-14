@@ -21,16 +21,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit Carbon GSM telephony parts
+$(call inherit-product, vendor/carbon/config/gsm.mk)
 
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
-CUSTOM_BUILD_TYPE := UNOFFICIAL
+# Inherit Carbon product configuration
+$(call inherit-product, vendor/carbon/config/common.mk)
+
+# CarbonRom Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.carbon.maintainer="EnesSastim"
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := pme
-PRODUCT_NAME := aosp_pme
+PRODUCT_NAME := carbon_pme
 PRODUCT_BRAND := HTC
 PRODUCT_MODEL := HTC 10
 PRODUCT_MANUFACTURER := HTC

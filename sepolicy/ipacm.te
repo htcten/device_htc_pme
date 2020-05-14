@@ -1,0 +1,1 @@
+allow ipacm unlabeled:file { lock open read write };
